@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from utils import attach
 from appium import webdriver
 from selene import browser
+from faker import Faker
 
 
 def pytest_addoption(parser):
@@ -37,3 +38,9 @@ def mobile_management(request):
 
     with allure.step('Close driver'):
         browser.quit()
+
+
+@pytest.fixture
+def generate_email():
+    fake = Faker()
+    return fake.email()

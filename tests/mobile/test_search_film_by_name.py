@@ -4,7 +4,7 @@ from okko.mobile_pages.main_page import main_page
 from okko.mobile_pages.catalogue_page import catalogue
 
 
-@allure.tag('UI')
+@allure.tag('UI Mobile')
 @allure.feature('Search film by title')
 @allure.title('Search film by title from catalogue')
 @allure.severity(Severity.CRITICAL)

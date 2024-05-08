@@ -12,12 +12,11 @@ class TestRegistrationForm:
     @allure.title('Register with valid email')
     @allure.severity(Severity.CRITICAL)
     @allure.link('https://okko.tv/', name='Онлайн-кинотеатр OKKO')
-    def test_registration_with_valid_email(self):
+    def test_registration_with_valid_email(self, generate_email):
         main_page.open()
         main_page.open_registration_form()
-        valid_email = 'test@gmail.com'
 
-        registration_from.register_with_email(valid_email)
+        registration_from.register_with_email(generate_email)
 
     @pytest.mark.negative
     @allure.tag('UI')

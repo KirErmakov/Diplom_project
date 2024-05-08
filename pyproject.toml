@@ -16,6 +16,7 @@ appium-python-client = "^4.0.0"
 pydantic-settings = "^2.2.1"
 curlify = "^2.2.1"
 jsonschema = "^4.22.0"
+faker = "^25.0.1"
 
 
 [build-system]

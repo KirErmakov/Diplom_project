@@ -4,6 +4,7 @@ from utils import attach
 from selene.support.shared import browser
 from selenium import webdriver
 from selenium.webdriver import ChromeOptions, FirefoxOptions
+from faker import Faker
 
 
 def pytest_addoption(parser):
@@ -43,3 +44,9 @@ def manage_browser(request):
         attach.add_html(browser)
 
     browser.quit()
+
+
+@pytest.fixture
+def generate_email():
+    fake = Faker()
+    return fake.email()

@@ -4,7 +4,7 @@ from okko.mobile_pages.main_page import main_page
 from okko.mobile_pages.shop_page import shop_page
 
 
-@allure.tag('UI')
+@allure.tag('UI Mobile')
 @allure.feature('Film shop')
 @allure.title('Purchase film')
 @allure.severity(Severity.CRITICAL)
