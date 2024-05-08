@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "diplom-project"
+version = "0.1.0"
+description = ""
+authors = ["K1rMac <lvstrng161@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^8.2.0"
+selene = "2.0.0rc9"
+requests = "^2.31.0"
+python-dotenv = "^1.0.1"
+allure-pytest = "^2.13.5"
+appium-python-client = "^4.0.0"
+pydantic-settings = "^2.2.1"
+curlify = "^2.2.1"
+jsonschema = "^4.22.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -104,12 +104,12 @@ ipython_config.py
 # pdm
 #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
 #pdm.lock
-#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   pdm stores okko-wide configurations in .pdm.toml, but it is recommended to not include it
 #   in version control.
 #   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-okko/pdm
 __pypackages__/
 
 # Celery stuff
@@ -121,6 +121,8 @@ celerybeat.pid
 
 # Environments
 .env
+.env.bstack
+.env.emulator_local
 .venv
 env/
 venv/
@@ -128,11 +130,11 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
+# Spyder okko settings
 .spyderproject
 .spyproject
 
-# Rope project settings
+# Rope okko settings
 .ropeproject
 
 # mkdocs documentation
@@ -157,4 +159,5 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/
+allure-results/
