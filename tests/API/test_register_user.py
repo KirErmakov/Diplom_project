@@ -7,7 +7,8 @@ from utils.json_validator import validate_schema
 
 @pytest.mark.positive
 @allure.tag('API')
-@allure.feature('Registration')
+@allure.feature('API')
+@allure.story('Register User')
 @allure.title('Successful user registration')
 @allure.link('https://reqres.in/')
 def test_register_successful(base_endpoint):
@@ -23,7 +24,8 @@ def test_register_successful(base_endpoint):
 
 @pytest.mark.negative
 @allure.tag('API')
-@allure.feature('Registration')
+@allure.feature('API')
+@allure.story('Register User')
 @allure.title('Unsuccessful user registration')
 @allure.link('https://reqres.in/')
 def test_register_unsuccessful(base_endpoint):

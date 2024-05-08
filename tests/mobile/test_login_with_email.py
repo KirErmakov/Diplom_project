@@ -5,7 +5,8 @@ import allure
 
 
 @allure.tag('UI Mobile')
-@allure.feature('Login with email')
+@allure.feature('Mobile')
+@allure.story('Register with email')
 @allure.title('Register with valid email')
 @allure.severity(Severity.CRITICAL)
 @allure.link('https://okko.tv/', name='Онлайн-кинотеатр OKKO')

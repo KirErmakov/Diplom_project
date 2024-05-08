@@ -4,8 +4,9 @@ from okko.mobile_pages.main_page import main_page
 from okko.mobile_pages.shop_page import shop_page
 
 
-@allure.tag('UI Mobile')
-@allure.feature('Film shop')
+@allure.tag('Mobile')
+@allure.feature('Mobile')
+@allure.story('Purchase film from shop')
 @allure.title('Purchase film')
 @allure.severity(Severity.CRITICAL)
 @allure.link('https://okko.tv/', name='Онлайн-кинотеатр OKKO')

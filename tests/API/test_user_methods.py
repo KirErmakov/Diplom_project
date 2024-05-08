@@ -5,8 +5,9 @@ from utils.json_validator import validate_schema
 
 
 @allure.tag('API')
-@allure.feature('Create user')
-@allure.title('Create user')
+@allure.feature('API')
+@allure.story('Create user')
+@allure.title('Create new user')
 @allure.link('https://reqres.in/')
 def test_create_user(base_endpoint):
     response = api_call.send_request('post', base_url=base_endpoint[0], payload=data_for_post)
@@ -21,8 +22,9 @@ def test_create_user(base_endpoint):
 
 
 @allure.tag('API')
-@allure.feature('Update user')
-@allure.title('Update user info')
+@allure.feature('API')
+@allure.story('Update user')
+@allure.title('Update existing user')
 @allure.link('https://reqres.in/')
 def test_update_user(base_endpoint):
     response = api_call.send_request('put', base_url=f"{base_endpoint[0]}/2", payload=data_for_update)
@@ -37,8 +39,9 @@ def test_update_user(base_endpoint):
 
 
 @allure.tag('API')
-@allure.feature('Delete user')
-@allure.title('Delete user')
+@allure.feature('API')
+@allure.story('Delete user')
+@allure.title('Delete existing user')
 @allure.link('https://reqres.in/')
 def test_delete_user(base_endpoint):
     response = api_call.send_request('delete', base_url=f"{base_endpoint[0]}/2")

@@ -7,7 +7,8 @@ from utils.json_validator import validate_schema
 
 @pytest.mark.positive
 @allure.tag('API')
-@allure.feature('Get user info')
+@allure.feature('API')
+@allure.story('Get user info')
 @allure.title('Get existing user info')
 @allure.link('https://reqres.in/')
 def test_get_user(base_endpoint):
@@ -23,7 +24,8 @@ def test_get_user(base_endpoint):
 
 @pytest.mark.negative
 @allure.tag('API')
-@allure.feature('Get user info')
+@allure.feature('API')
+@allure.story('Get user info')
 @allure.title('Get non-existing user info')
 @allure.link('https://reqres.in/')
 def test_get_not_existing_user(base_endpoint):
