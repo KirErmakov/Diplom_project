@@ -10,6 +10,9 @@ class CataloguePage:
     @allure.step('Search film by title')
     def search_film(self, film_title):
         s((AppiumBy.ID, 'ru.more.play:id/searchEditText')).type(film_title)
+
+    @allure.step('Check search result')
+    def check_result(self, film_title):
         try:
             s((AppiumBy.ACCESSIBILITY_ID, f'{film_title}')).should(be.visible.and_(be.clickable))
 

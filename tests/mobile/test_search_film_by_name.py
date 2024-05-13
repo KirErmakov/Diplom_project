@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
-from okko.mobile_pages.main_page import main_page
-from okko.mobile_pages.catalogue_page import catalogue
+from models.pages.mobile.main_page import main_page
+from models.pages.mobile.catalogue_page import catalogue
 
 
 @allure.tag('UI Mobile')
@@ -15,3 +15,5 @@ def test_search_film_by_title():
     main_page.go_to_catalogue()
 
     catalogue.search_film(film_tile)
+
+    catalogue.check_result(film_tile)

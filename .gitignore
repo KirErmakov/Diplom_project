@@ -104,12 +104,12 @@ ipython_config.py
 # pdm
 #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
 #pdm.lock
-#   pdm stores okko-wide configurations in .pdm.toml, but it is recommended to not include it
+#   pdm stores models-wide configurations in .pdm.toml, but it is recommended to not include it
 #   in version control.
 #   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-okko/pdm
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-models/pdm
 __pypackages__/
 
 # Celery stuff
@@ -130,11 +130,11 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder okko settings
+# Spyder models settings
 .spyderproject
 .spyproject
 
-# Rope okko settings
+# Rope models settings
 .ropeproject
 
 # mkdocs documentation

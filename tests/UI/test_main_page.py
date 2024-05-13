@@ -1,11 +1,12 @@
-from okko.web_pages.main_page import main_page
+from models.pages.web.main_page import main_page
 import allure
 from allure_commons.types import Severity
 
 
 class TestMainPage:
     @allure.tag('UI')
-    @allure.feature('Registration options')
+    @allure.feature('UI')
+    @allure.story('Registration options')
     @allure.title('Check registration options')
     @allure.severity(Severity.CRITICAL)
     @allure.link('https://okko.tv/', name='Онлайн-кинотеатр OKKO')
@@ -13,10 +14,12 @@ class TestMainPage:
         main_page.open()
 
         main_page.open_registration_form()
+
         main_page.check_registration_options_available()
 
     @allure.tag('UI')
-    @allure.feature('Film search')
+    @allure.feature('UI')
+    @allure.story('Film search')
     @allure.title('Search film by title')
     @allure.severity(Severity.CRITICAL)
     @allure.link('https://okko.tv/', name='Онлайн-кинотеатр OKKO')
@@ -26,8 +29,11 @@ class TestMainPage:
 
         main_page.search_film_by_title(film_title_for_search)
 
+        main_page.check_result(film_title_for_search)
+
     @allure.tag('UI')
-    @allure.feature('Web-app sections')
+    @allure.feature('UI')
+    @allure.story('Web-app sections')
     @allure.title('Check selected section availability')
     @allure.severity(Severity.CRITICAL)
     @allure.link('https://okko.tv/', name='Онлайн-кинотеатр OKKO')
@@ -37,8 +43,11 @@ class TestMainPage:
 
         main_page.go_to_selected_section(section_name)
 
+        main_page.check_section_name(section_name)
+
     @allure.tag('UI')
-    @allure.feature('Film genre')
+    @allure.feature('UI')
+    @allure.story('Film genre')
     @allure.title('Select film by genre')
     @allure.severity(Severity.NORMAL)
     @allure.link('https://okko.tv/', name='Онлайн-кинотеатр OKKO')
@@ -47,10 +56,12 @@ class TestMainPage:
         main_page.open()
 
         main_page.go_to_selected_films_genre(film_genre)
+
         main_page.check_film_has_selected_genre(film_genre)
 
     @allure.tag('UI')
-    @allure.feature('Film category')
+    @allure.feature('UI')
+    @allure.story('Film category')
     @allure.title('Select films by category')
     @allure.severity(Severity.NORMAL)
     @allure.link('https://okko.tv/', name='Онлайн-кинотеатр OKKO')

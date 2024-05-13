@@ -1,7 +1,7 @@
 import pytest
 import allure
-from api_resources.data import complete_creds, incomplete_creds
-from api_project.api_call import api_call
+from test_data.data import complete_creds, incomplete_creds
+from request_helper.api_call import api_call
 from utils.json_validator import validate_schema
 
 

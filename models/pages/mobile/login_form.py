@@ -14,6 +14,9 @@ class LoginForm:
     @allure.step('Register with entered email')
     def register_with_email(self):
         s((AppiumBy.ID, 'ru.more.play:id/singleAuthorizationEnterButton')).click()
+
+    @allure.step('Check the code message is displayed')
+    def check_code_message(self):
         s((AppiumBy.XPATH, '//android.widget.TextView[@text="Введите код из письма"]')).should(be.visible)
 
 

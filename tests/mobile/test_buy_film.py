@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
-from okko.mobile_pages.main_page import main_page
-from okko.mobile_pages.shop_page import shop_page
+from models.pages.mobile.main_page import main_page
+from models.pages.mobile.shop_page import shop_page
 
 
 @allure.tag('Mobile')
@@ -13,4 +13,6 @@ from okko.mobile_pages.shop_page import shop_page
 def test_buy_film():
     main_page.go_to_shop()
 
-    shop_page.buy_film()
+    shop_page.open_paid_film_card()
+
+    shop_page.check_purchase_option()

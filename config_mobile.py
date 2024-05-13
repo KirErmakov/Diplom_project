@@ -29,7 +29,7 @@ class Config(BaseSettings):
             options.set_capability(
                 'bstack:options',
                 {
-                    "projectName": "First Python okko",
+                    "projectName": "First Python models",
                     "buildName": "browserstack-build-1",
                     "sessionName": "BStack first_test",
                     "userName": self.USER_NAME,

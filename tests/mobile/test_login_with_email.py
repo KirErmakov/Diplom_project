@@ -1,6 +1,6 @@
 from allure_commons.types import Severity
-from okko.mobile_pages.main_page import main_page
-from okko.mobile_pages.login_form import login_form
+from models.pages.mobile.main_page import main_page
+from models.pages.mobile.login_form import login_form
 import allure
 
 
@@ -15,3 +15,5 @@ def test_login_with_email(generate_email):
 
     login_form.enter_email(generate_email)
     login_form.register_with_email()
+
+    login_form.check_code_message()

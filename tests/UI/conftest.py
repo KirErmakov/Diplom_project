@@ -16,16 +16,6 @@ def manage_browser(request):
     browser_name = request.config.getoption('--browser_name')
     options = ChromeOptions() if browser_name.lower() == 'chrome' else FirefoxOptions()
 
-    '''common_options = [
-        '--no-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-extensions',
-        '--disable-popup-blocking',
-        '--disable-infobars'
-    ]
-    for option in common_options:
-        options.add_argument(option)'''
-
     driver_class = webdriver.Chrome if browser_name.lower() == 'chrome' else webdriver.Firefox
     browser.config.driver = driver_class(options=options)
     browser.config.base_url = "https://okko.tv"
@@ -38,7 +28,8 @@ def manage_browser(request):
         attach.add_screenshot(browser)
 
     with allure.step('Add browser logs'):
-        attach.add_logs(browser)
+        if browser_name == 'chrome':
+            attach.add_logs(browser)
 
     with allure.step('Add HTML'):
         attach.add_html(browser)

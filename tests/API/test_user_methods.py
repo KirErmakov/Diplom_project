@@ -1,6 +1,6 @@
 import allure
-from api_resources.data import data_for_post, data_for_update
-from api_project.api_call import api_call
+from test_data.data import data_for_post, data_for_update
+from request_helper.api_call import api_call
 from utils.json_validator import validate_schema
 
 

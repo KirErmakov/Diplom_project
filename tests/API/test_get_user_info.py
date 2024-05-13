@@ -1,7 +1,7 @@
 import pytest
 import allure
-from api_resources.data import existing_user_id, not_existing_user_id
-from api_project.api_call import api_call
+from test_data.data import existing_user_id, not_existing_user_id
+from request_helper.api_call import api_call
 from utils.json_validator import validate_schema
 
 

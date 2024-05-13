@@ -18,6 +18,15 @@ curlify = "^2.2.1"
 jsonschema = "^4.22.0"
 faker = "^25.0.1"
 
+[tool.pytest.ini_options]
+addopts = "--alluredir=allure-results --clean-alluredir"
+log_cli = true
+log_level = "INFO"
+
+markers = [
+    "positive: mark a test as a positive test",
+    "negative: mark a test as a negative test"
+]
 
 [build-system]
 requires = ["poetry-core"]
