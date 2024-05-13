@@ -1,4 +1,4 @@
-from models.pages.web.main_page import main_page
+from okko_tests.pages.web.main_page import main_page
 import allure
 from allure_commons.types import Severity
 

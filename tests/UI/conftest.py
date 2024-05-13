@@ -1,6 +1,6 @@
 import pytest
 import allure
-from utils import attach
+from okko_tests.utils import attach
 from selene.support.shared import browser
 from selenium import webdriver
 from selenium.webdriver import ChromeOptions, FirefoxOptions

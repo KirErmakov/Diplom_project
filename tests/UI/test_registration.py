@@ -1,8 +1,8 @@
 import pytest
 import allure
 from allure_commons.types import Severity
-from models.pages.web.main_page import main_page
-from models.pages.web.registration_form import registration_form
+from okko_tests.pages.web.main_page import main_page
+from okko_tests.pages.web.registration_form import registration_form
 
 
 class TestRegistrationForm:

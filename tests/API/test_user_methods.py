@@ -1,7 +1,7 @@
 import allure
-from test_data.data import data_for_post, data_for_update
-from request_helper.api_call import api_call
-from utils.json_validator import validate_schema
+from reqres_tests.test_data.data import data_for_post, data_for_update
+from reqres_tests.request_helper.api_call import api_call
+from reqres_tests.utils.json_validator import validate_schema
 
 
 @allure.tag('API')

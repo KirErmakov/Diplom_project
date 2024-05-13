@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
-from models.pages.mobile.main_page import main_page
-from models.pages.mobile.shop_page import shop_page
+from okko_tests.pages.mobile.main_page import main_page
+from okko_tests.pages.mobile.shop_page import shop_page
 
 
 @allure.tag('Mobile')

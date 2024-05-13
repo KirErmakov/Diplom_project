@@ -1,7 +1,7 @@
 import pytest
 import allure
 from dotenv import load_dotenv
-from utils import attach
+from okko_tests.utils import attach
 from appium import webdriver
 from selene import browser
 from faker import Faker

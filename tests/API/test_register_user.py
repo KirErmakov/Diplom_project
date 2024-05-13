@@ -1,8 +1,8 @@
 import pytest
 import allure
-from test_data.data import complete_creds, incomplete_creds
-from request_helper.api_call import api_call
-from utils.json_validator import validate_schema
+from reqres_tests.test_data.data import complete_creds, incomplete_creds
+from reqres_tests.request_helper.api_call import api_call
+from reqres_tests.utils.json_validator import validate_schema
 
 
 @pytest.mark.positive

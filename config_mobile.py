@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from pydantic_settings import BaseSettings
-from utils import path
+from okko_tests.utils import path
 from appium.options.android import UiAutomator2Options
 
 load_dotenv()

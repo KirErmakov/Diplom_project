@@ -1,5 +1,5 @@
 import allure
-from utils.api_logger import send_request_logger
+from reqres_tests.utils.logger import send_request_logger
 
 
 class ApiCall:
