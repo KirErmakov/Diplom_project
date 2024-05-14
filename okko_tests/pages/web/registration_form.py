@@ -14,7 +14,7 @@ class RegistrationForm:
     def check_registration_result(self, email_valid=True):
 
         if email_valid:
-            ss('p[class]').element_by(have.text('Мы отправили письмо')).should(be.visible)
+            s('[test-id="sliding_panel"]').should(be.visible)
         else:
             s('[test-id="sign_input"]+div').should(have.exact_text('Неверный формат'))
 
