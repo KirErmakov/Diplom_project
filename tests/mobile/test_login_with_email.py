@@ -1,6 +1,6 @@
 from allure_commons.types import Severity
 from okko_tests.pages.mobile.main_page import main_page
-from okko_tests.pages import login_form
+from okko_tests.pages.mobile.login_form import login_form
 import allure
 
 
