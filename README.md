@@ -79,4 +79,4 @@ Mobile:
 ### <img width="3%" title="Telegram" src="images/tg.png"> Интеграция с Telegram
 ##### После выполнения тестов, в Telegram bot приходит сообщение с графиком и информацией о тестовом прогоне.
 
-![This is an image](images/bot_mobile-result.png)
+![This is an image](images/bot_mobile_result.png)
