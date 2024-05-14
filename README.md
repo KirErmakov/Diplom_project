@@ -1,17 +1,19 @@
-<h1> Проект тестирования сайта и мобильного приложения онлайн-кинотеатра Okko </h1>
+<h1> Проект Web/Mobile тестирования онлайн-кинотеатра Okko + API reqres.in  </h1>
 
 > <a target="_blank" href="https://okko.tv/">Okko</a>
+<a target="_blank" href="https://reqres.in/">Reqres</a>
 
 ![This is an image](images/okko_tv.jpg)
 <!-- Технологии -->
 
 ### Используемые технологии
 <p  align="center">
-  <code><img width="5%" title="PyCharm" src="images/pycharm.png"></code>
-  <code><img width="5%" title="Python" src="images/python.png"></code>
+   <code><img width="5%" title="Python" src="images/python.png"></code>
   <code><img width="5%" title="Pytest" src="images/pytest.png"></code>
+  <code><img width="5%" title="Requests" src="images/requests.png"></code>
   <code><img width="5%" title="Selene" src="images/selene.png"></code>
   <code><img width="5%" title="Selenium" src="images/selenium.png"></code>
+  <code><img width="5%" title="PyCharm" src="images/pycharm.png"></code>
   <code><img width="5%" title="Jenkins" src="images/jenkins.png"></code>
   <code><img width="5%" title="Allure Report" src="images/allure_report.png"></code>
   <code><img width="5%" title="Allure TestOps" src="images/allure_testops.png"></code>
@@ -33,14 +35,21 @@ UI:
 Mobile:
 * ✅ Регистрация пользователя через email
 * ✅ Поиск фильма по названию
-* ✅ Покупка фильма  
+* ✅ Покупка фильма
+
+ API:
+* ✅ Cоздание пользователя
+* ✅ Логин пользователя
+* ✅ Получение ифнормации о пользователе
+* ✅ Обновление ифнормации о пользователе
+* ✅ Удаление пользователя
 
 
 <!-- Jenkins -->
 
 ### <img width="3%" title="Jenkins" src="images/jenkins.png"> Запуск проекта в Jenkins
 
-### [Задача в jenkins](https://jenkins.autotests.cloud/job/KirErmakov_Diplom_project)
+### [Задача в jenkins](https://jenkins.autotests.cloud/job/Okko-reqres-project/)
 
 
 <!-- Allure report -->
@@ -49,8 +58,9 @@ Mobile:
 
 ##### Результаты выполнения тестова можно посмотреть в Allure-отчете
 ![This is an image](images/allure_dashboard.jpg)
+![This is an image](images/allure-api.jpg)
 
-##### Видео прохождение теста (Регистрация пользователя)
+##### Видео прохождение теста на мобильном устройстве
 ![This is an image](images/mobile_test.gif)
 
 
@@ -79,3 +89,4 @@ Mobile:
 ##### После выполнения тестов, в Telegram bot приходит сообщение с графиком и информацией о тестовом прогоне.
 
 ![This is an image](images/bot_mobile_result.png)
+![This is an image](images/bot_api_result.png)
