@@ -89,4 +89,4 @@ Mobile:
 ##### После выполнения тестов, в Telegram bot приходит сообщение с графиком и информацией о тестовом прогоне.
 
 ![This is an image](images/bot_mobile_result.png)
-![This is an image](images/bot_api_result.jpg)
+![This is an image](images/bot_api_result.png)
