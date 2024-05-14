@@ -47,7 +47,7 @@ Mobile:
 
 ### <img width="3%" title="Allure Report" src="images/allure_report.png"> Allure report
 
-##### Результаты выполнения тестова можно посмотреть в Allure отчете
+##### Результаты выполнения тестова можно посмотреть в Allure-отчете
 ![This is an image](images/allure_dashboard.jpg)
 
 ##### Видео прохождение теста (Регистрация пользователя)
@@ -69,7 +69,6 @@ Mobile:
 <!-- Jira -->
 
 ### <img width="3%" title="Jira" src="images/jira.png"> Интеграция с Jira
-##### Настроив через Allure TestOps интеграцию с Jira, в тикет можно пробросить результат прохождение тестов и список тест-кейсов из Allure
 
 ![This is an image](images/jira_okko.jpg)
 
