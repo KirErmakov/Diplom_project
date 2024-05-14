@@ -53,7 +53,7 @@ class MainPage:
 
     @allure.step('Go to selected category of films')
     def go_to_selected_category(self, category):
-        ss('[test-id="search_collection_element"]').element_by(have.exact_text(category)).click()
+        s('[test-id="search_collection_element"]').s(f'//span[text()="{category}"]').click()
         s('[test-id="collection_page_title"]').should(have.exact_text(category))
         ss('[test-id=card_rail_header]').element_by(have.exact_text(category))
 

@@ -1,5 +1,5 @@
 from selene import be, have
-from selene.support.shared.jquery_style import s
+from selene.support.shared.jquery_style import s, ss
 import allure
 
 
@@ -14,7 +14,7 @@ class RegistrationForm:
     def check_registration_result(self, email_valid=True):
 
         if email_valid:
-            s('h3[class]').should(have.exact_text('Введите код из письма'))
+            ss('p[class]').element_by(have.text('Мы отправили письмо')).should(be.visible)
         else:
             s('[test-id="sign_input"]+div').should(have.exact_text('Неверный формат'))
 
