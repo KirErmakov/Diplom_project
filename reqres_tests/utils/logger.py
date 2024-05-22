@@ -17,13 +17,8 @@ def send_request_logger(method, url, **kwargs):
             allure.attach(body=json.dumps(response.json(), indent=4), name='response',
                           attachment_type=allure.attachment_type.JSON, extension='json')
         except json.JSONDecodeError:
-            try:
-                json_response = json.dumps(response.json(), indent=4)
-                allure.attach(body=json_response, name='response', attachment_type=allure.attachment_type.JSON,
-                              extension='json')
-            except json.JSONDecodeError:
-                response_text = response.text if response.text is not None else 'No content'
-                allure.attach(body=response_text, name='response', attachment_type=allure.attachment_type.TEXT,
-                              extension='txt')
+            response_text = response.text if response.text is not None else 'No content'
+            allure.attach(body=response_text, name='response', attachment_type=allure.attachment_type.TEXT,
+                          extension='txt')
 
         return response
