@@ -47,15 +47,17 @@ class MainPage:
         s('[test-id="collection_page_title"]').should(have.exact_text(genre))
 
     @allure.step('Check film in section has selected genre')
-    def check_film_has_selected_genre(self, genre):
+    def check_first_film_has_selected_genre(self, genre):
         ss('[test-id="search_collection_element"]').first.click()
         s('[test-id="meta_genre"]').should(have.exact_text(genre))
 
     @allure.step('Go to selected category of films')
     def go_to_selected_category(self, category):
         s('[test-id="search_collection_element"]').s(f'//span[text()="{category}"]').click()
+
+    @allure.step('Check category title')
+    def check_category_title(self, category):
         s('[test-id="collection_page_title"]').should(have.exact_text(category))
-        ss('[test-id=card_rail_header]').element_by(have.exact_text(category))
 
 
 main_page = MainPage()

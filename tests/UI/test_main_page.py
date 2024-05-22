@@ -57,7 +57,7 @@ class TestMainPage:
 
         main_page.go_to_selected_films_genre(film_genre)
 
-        main_page.check_film_has_selected_genre(film_genre)
+        main_page.check_first_film_has_selected_genre(film_genre)
 
     @allure.tag('UI')
     @allure.feature('UI')
@@ -70,3 +70,5 @@ class TestMainPage:
         main_page.open()
 
         main_page.go_to_selected_category(film_category)
+
+        main_page.check_category_title(film_category)
