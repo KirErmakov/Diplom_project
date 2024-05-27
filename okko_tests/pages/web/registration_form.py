@@ -1,5 +1,5 @@
 from selene import be, have
-from selene.support.shared.jquery_style import s, ss
+from selene.support.shared.jquery_style import s
 import allure
 
 

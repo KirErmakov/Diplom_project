@@ -6,13 +6,17 @@ import allure
 
 class ShopPage:
 
+    def __init__(self):
+        self.film_card = ss((AppiumBy.XPATH, '//android.widget.ImageView')).element(2)
+        self.purchase_button = s((AppiumBy.ID, 'ru.more.play:id/contentCardPrimaryButton'))
+
     @allure.step('Go to paid film card')
     def open_paid_film_card(self):
-        ss((AppiumBy.XPATH, '//android.widget.ImageView')).element(2).click()
+        self.film_card.click()
 
     @allure.step('Verify the purchase option')
     def check_purchase_option(self):
-        s((AppiumBy.ID, 'ru.more.play:id/contentCardPrimaryButton')).should(be.visible.and_(be.clickable))
+        self.purchase_button.should(be.visible.and_(be.clickable))
 
 
 shop_page = ShopPage()

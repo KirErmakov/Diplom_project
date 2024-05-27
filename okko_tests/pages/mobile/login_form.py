@@ -6,18 +6,24 @@ from appium.webdriver.common.appiumby import AppiumBy
 
 class LoginForm:
 
+    def __init__(self):
+        self.login_button = s((AppiumBy.ID, 'ru.more.play:id/profileLoginButton'))
+        self.email_input_field = s((AppiumBy.ID, 'ru.more.play:id/singleAuthorizationEditText'))
+        self.register_button = s((AppiumBy.ID, 'ru.more.play:id/singleAuthorizationEnterButton'))
+        self.code_message = s((AppiumBy.XPATH, '//android.widget.TextView[@text="Введите код из письма"]'))
+
     @allure.step('Enter email into input field')
     def enter_email(self, email):
-        s((AppiumBy.ID, 'ru.more.play:id/profileLoginButton')).click()
-        s((AppiumBy.ID, 'ru.more.play:id/singleAuthorizationEditText')).type(email)
+        self.login_button.click()
+        self.email_input_field.type(email)
 
     @allure.step('Register with entered email')
     def register_with_email(self):
-        s((AppiumBy.ID, 'ru.more.play:id/singleAuthorizationEnterButton')).click()
+        self.register_button.click()
 
     @allure.step('Check the code message is displayed')
     def check_code_message(self):
-        s((AppiumBy.XPATH, '//android.widget.TextView[@text="Введите код из письма"]')).should(be.visible)
+        self.code_message.should(be.visible)
 
 
 login_form = LoginForm()
