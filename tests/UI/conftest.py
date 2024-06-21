@@ -24,8 +24,11 @@ def manage_browser(request):
 
     yield
 
-    with allure.step('Add screenshot'):
-        attach.add_screenshot(browser)
+    report = request.node.rep_call
+
+    if report.failed:
+        with allure.step('Add screenshot'):
+            attach.add_screenshot(browser)
 
     with allure.step('Add browser logs'):
         if browser_name == 'chrome':
@@ -41,3 +44,10 @@ def manage_browser(request):
 def generate_email():
     fake = Faker()
     return fake.email()
+
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    report = outcome.get_result()
+    setattr(item, 'rep_' + report.when, report)
